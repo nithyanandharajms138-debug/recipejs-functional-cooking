@@ -85,12 +85,9 @@ const createRecipeCard = (recipe) => {
 console.log(createRecipeCard(recipes[0]));
 // Function to render recipes to the DOM
 const renderRecipes = (recipesToRender) => {
-    const allCardsHTML = recipesToRender.map(createRecipeCard).join('');
-    recipeContainer.innerHTML = recipeCardsHTML;
-    // TODO: Use map() to transform each recipe into HTML
-    // TODO: Join all HTML strings together
-    // TODO: Set innerHTML of recipeContainer
-
+    recipeContainer.innerHTML = recipesToRender
+        .map(createRecipeCard)
+        .join('');
 };
 
 // Initialize: Render all recipes when page loads
