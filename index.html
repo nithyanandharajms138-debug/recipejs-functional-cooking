@@ -10,8 +10,21 @@
 </head>
 <body>
     <header>
-    <h1>🍳 RecipeJS</h1>
-    <p>Your Functional Cooking Companion</p>
+        <h1>🍳 RecipeJS</h1>
+        <p>Your Functional Cooking Companion</p>
+        
+        <!-- NEW: Search Container -->
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search recipes or ingredients..."
+                autocomplete="off"
+            >
+            <button id="clear-search" class="clear-btn" style="display: none;">
+                ✕
+            </button>
+        </div>
     </header>
     <main>
     <!-- NEW: Controls Section -->
@@ -25,6 +38,7 @@
                 <button class="filter-btn" data-filter="medium">Medium</button>
                 <button class="filter-btn" data-filter="hard">Hard</button>
                 <button class="filter-btn" data-filter="quick">Quick Recipes (< 30 min)</button>
+                <button class="filter-btn" data-filter="favorites">❤️ Favorites Only</button>
             </div>
         </div>
 
@@ -39,18 +53,18 @@
         </div>
     </section>
 
-    <!-- Existing Recipe Container -->
+    <!-- NEW: Recipe Counter -->
+    <div class="recipe-info">
+        <p id="recipe-count">Showing 0 of 0 recipes</p>
+    </div>
+
+    <!-- Recipe Container -->
     <div id="recipe-container">
         <!-- Recipe cards will be rendered here by JavaScript -->
     </div>
     </main>
-    <main><div id="recipe-container"><!-- Recipe cards will be rendered here by JavaScript --></div></main>
     
-    <!-- TODO: Add header section -->
-    
-    <!-- TODO: Add main section -->
-    
-    <!-- TODO: Link your JavaScript file here -->
-     <script src="app.js"></script>
+    <!-- Link JavaScript file -->
+    <script src="app.js"></script>
 </body>
 </html>
