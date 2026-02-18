@@ -320,3 +320,137 @@ main {
 .substeps-list .substeps-list li {
     font-size: 0.85rem;
 }
+
+/* ============================================ */
+/* SEARCH BAR STYLES */
+/* ============================================ */
+.search-container {
+    max-width: 500px;
+    margin: 1.5rem auto 0;
+    position: relative;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+#search-input::placeholder {
+    color: #999;
+}
+
+.clear-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #999;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.clear-btn:hover {
+    color: #667eea;
+}
+
+/* ============================================ */
+/* RECIPE COUNTER STYLES */
+/* ============================================ */
+.recipe-info {
+    text-align: center;
+    margin: 1.5rem 0;
+    color: #666;
+    font-weight: 500;
+}
+
+/* ============================================ */
+/* FAVORITE BUTTON ON CARDS */
+/* ============================================ */
+.recipe-card {
+    position: relative;
+}
+
+.favorite-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    z-index: 10;
+}
+
+.favorite-btn:hover {
+    transform: scale(1.2);
+}
+
+.favorite-btn.favorited {
+    opacity: 1;
+}
+
+/* ============================================ */
+/* RESPONSIVE DESIGN */
+/* ============================================ */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .search-container {
+        margin: 1rem auto 0;
+    }
+    
+    #search-input {
+        padding: 0.6rem 2rem 0.6rem 0.75rem;
+    }
+    
+    .recipe-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .filter-btn,
+    .sort-btn {
+        width: 100%;
+    }
+    
+    .recipe-card {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    #recipe-container {
+        gap: 1rem;
+    }
+}
